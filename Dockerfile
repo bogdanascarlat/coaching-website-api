@@ -17,6 +17,7 @@ ENV NODE_OPTIONS=--max_old_space_size=$MAX_OLD_SPACE_SIZE
 
 RUN cd /opt/backend \
   && npm install \
+  && mv .env.local .env \
   && rm -rf /home/node/.cache
 
 EXPOSE 8080
